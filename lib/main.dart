@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/home_page.dart';
 
-void main() => runApp(const MaterialApp(
-      home: LoginPage(),
-    ));
+void main() {
+  runApp(const MyApp());
+}
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Student ID Card'),
-      ),
+    return const MaterialApp(
+      home: HomePage(),
     );
   }
 }
