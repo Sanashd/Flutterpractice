@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/pages/home_page.dart';
 import 'package:flutter_demo/pages/login_page.dart';
+import 'package:flutter_demo/utilis/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -11,25 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //bringVegetables(thaila: true);  // Methods inside the class
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
           fontFamily: GoogleFonts.lato().fontFamily),
+      debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(primarySwatch: Colors.green),
       // initialRoute: "/home",
       routes: {
         "/": (context) => const LoginPage(),
-        // "/home": (context) => const HomePage(),
-        // "/login": (context) => const LoginPage()
+        MyRoutes.homeRoute: (context) => const HomePage(),
+        MyRoutes.loginRoute: (context) => const LoginPage()
       },
     );
   }
 }
-
-//bringVegetables({required bool thaila, int rupees = 100 }) {
-  // Go to Grocery shop
-  // Bring Vegetables
-
-// Function outside the class
